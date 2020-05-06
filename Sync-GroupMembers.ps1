@@ -1,3 +1,4 @@
+#Requires -Modules AzureAD
 <#
 .SYNOPSIS
   This will sync Office365 / Azure AD group members to a corresponding Security Group
@@ -5,9 +6,6 @@
   For use case where you want an Office365 Group to sync to a Security Group used by SharePoint Online permissions, Enterprise Applications Access etc.
   For example, Team Contoso has a Microsoft Teams group where membership changes has been delegated to the Group Owner(s).
   The script will sync members to Team Contoso Security Group while also sending an email to the group to confirm changes. 
-.REQUIREMENTS
-  Azure AD Module
-  Install-Module AzureAD
 .INPUTS
   The script requires input from CSV, this can be modified to grab it from a SharePoint list if you'd like (just an idea)
   CSV Filename: Sync-GroupMemberList.csv
